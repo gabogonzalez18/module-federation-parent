@@ -9,6 +9,7 @@ import { AuthLibModule } from 'auth-lib';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RendererModule, TransferHttpCacheModule } from '@nguniversal/common/clover';
+import { MetatagsService } from 'projects/mfe1/src/app/services/metatags.service';
 // import { SharedLibModule } from 'projects/shared-lib/src/public-api';
 
 @NgModule({
@@ -27,7 +28,7 @@ import { RendererModule, TransferHttpCacheModule } from '@nguniversal/common/clo
     HomeComponent,
     NotFoundComponent
   ],
-  providers: [],
+  providers: [MetatagsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

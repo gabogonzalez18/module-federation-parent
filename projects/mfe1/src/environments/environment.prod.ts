@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  apiUrlMockOtp: 'http://yj0jz.mocklab.io',
 };

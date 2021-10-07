@@ -19,14 +19,13 @@
     "build:client-and-server:mfe1": "ng build mfe1 && ng run mfe1:server",
     "build:server:mfe1": "ng run mfe1:server",
     "serve:ssr:mfe1": "node dist/mfe1/server/main.js",
-
     "build:client-and-server:shell": "ng build shell && ng run shell:server",
     "build:server:shell": "ng run shell:server",
     "serve:ssr:shell": "node dist/shell/server/main.js"
   },
   "private": true,
   "dependencies": {
-    "@angular-architects/module-federation": "^12.3.0-beta.9",
+    "@angular-architects/module-federation": "^12.4.0",
     "@angular-architects/module-federation-tools": "^0.0.1",
     "@angular/animations": "12.0.0",
     "@angular/common": "12.0.0",

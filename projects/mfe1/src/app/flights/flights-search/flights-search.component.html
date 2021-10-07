@@ -38,7 +38,10 @@
     <div>
         <img src="../../../assets/angular.png" width="50">
     </div>
-    <h1>Flights</h1>
+    <h1>Cotizacion</h1>
+    <span *ngIf="response.titleValidation">
+        {{'Titulo:' + response.titleValidation}}
+    </span>
     <div>
         <input type="text" placeholder="From">
     </div>

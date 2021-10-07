@@ -15,7 +15,7 @@ import { RendererModule, TransferHttpCacheModule } from '@nguniversal/common/clo
     FlightsModule,
     RouterModule.forRoot(APP_ROUTES),
     RendererModule.forRoot(),
-    TransferHttpCacheModule
+    TransferHttpCacheModule,
   ],
   declarations: [
     HomeComponent,
