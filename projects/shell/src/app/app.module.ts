@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -10,8 +10,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RendererModule, TransferHttpCacheModule } from '@nguniversal/common/clover';
 import { MetatagsService } from 'projects/mfe1/src/app/services/metatags.service';
+import { OrquestationService } from './services/orquestation.service';
 // import { SharedLibModule } from 'projects/shared-lib/src/public-api';
 
+export function orquestation(orquestationService:OrquestationService){
+  return () => {
+    console.log("APP INITIALIZER");
+    orquestationService.call();
+  }
+}
 @NgModule({
   imports: [
     BrowserModule.withServerTransition({ appId: 'appId' }),
@@ -28,7 +35,16 @@ import { MetatagsService } from 'projects/mfe1/src/app/services/metatags.service
     HomeComponent,
     NotFoundComponent
   ],
-  providers: [MetatagsService],
+  providers: [
+    MetatagsService,
+    OrquestationService,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: orquestation,
+      multi: true,
+      deps: [OrquestationService]
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

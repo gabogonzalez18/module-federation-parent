@@ -210,7 +210,7 @@
           "options": {
             "browserTarget": "shell:build",
             "extraWebpackConfig": "projects/shell/webpack.config.js",
-            "port": 5000
+            "port": 4000
           },
           "configurations": {
             "production": {

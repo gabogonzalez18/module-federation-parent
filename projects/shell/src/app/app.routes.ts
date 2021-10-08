@@ -4,7 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { WebComponentWrapper, WebComponentWrapperOptions } from '@angular-architects/module-federation-tools';
 
-const URL = 'http://127.0.0.1:8089/remoteEntry.js';
+const URL = 'http://127.0.0.1:8087/remoteEntry.js';
 
 export const APP_ROUTES: Routes = [
     {

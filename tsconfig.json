@@ -21,7 +21,10 @@
       ],
       "auth-lib": [
         "projects/auth-lib/src/public-api.ts"
-      ]
+      ],
+      "notification-lib": [
+        "projects/shell/src/public-api.ts"
+      ],
     }
   }
 }

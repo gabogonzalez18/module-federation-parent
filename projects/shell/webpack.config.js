@@ -7,6 +7,10 @@ sharedMappings.register(
   path.join(__dirname, '../../tsconfig.json'),
   ['auth-lib']
 );
+sharedMappings.register(
+  path.join(__dirname, '../../tsconfig.json'),
+  ['notification-lib']
+);
 
 module.exports = {
   output: {
